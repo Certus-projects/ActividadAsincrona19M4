@@ -1,0 +1,62 @@
+<p>busqueda works!</p>
+
+<section class="p-3">
+  <div class="d-flex mb-3 wrap">
+    <label for="inputUserId">ingrese id</label>
+
+    <div class="input-group has-min-max">
+      <input type="text" #inputUserId class="form-control">
+
+      <button type="button" (click)="busquedaGetUserId(inputUserId.value)" class="btn btn-info">buscar</button>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <p>{{resultado}},,,,{{inputUserId.value}},,,,,{{inputUserId.value.trim()!=''}}</p>
+
+    <!-- si hay error o input esta vacio -->
+    <!-- *ngIf="!resultado || inputUserId.value.trim()==''" -->
+    <!-- !pendiente -->
+    <section *ngIf="!resultado && !user" class="alert alert-danger">usuario no encontrado</section>
+
+    <p *ngIf="user && resultado" class="fs-1 text-center">Usuario encontrado</p>
+    <table *ngIf="user" class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th>USERNAME</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<style>
+  .wrap {
+    flex-flow: row wrap;
+    margin-inline: auto;
+    /* width: fit-content; */
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .has-min-max {
+    max-width: 20rem;
+    min-width: 10rem;
+  }
+</style>
+<script>
+  alli = document.querySelectorAll('input');
+  alli.forEach(input => {
+    input.classList.add('form-control')
+  });
+</script>

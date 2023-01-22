@@ -1,0 +1,18 @@
+<section class="container-md">
+
+  <section class="bg-light rounded-5 p-3">
+    <form (ngSubmit)="onSubmit()">
+      <section class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="datos.name" name="name">
+      </section>
+
+      <section class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" [(ngModel)]="datos.username" name="username">
+      </section>
+      <button type="submit" class="btn btn-success d-block mx-auto">Post user</button> <!-- ya no (click)="formPostUser()", en su lugar (ngSubmit)="onSubmit()" -->
+    </form>
+  </section>
+
+</section>

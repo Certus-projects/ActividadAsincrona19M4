@@ -1,0 +1,17 @@
+<section class="container pt-4">
+  <h1>Bobs Burgers Api</h1>
+  <section class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let photo of data" style="width: 180px; height: 300px;">
+      <div class="card mb-4">
+        <img class="card-img-top py-2" [src]="photo.image" [alt]="photo.name" />
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ photo.name }}</h5>
+        </div>
+        <span class="badge badge-pill badge-primary color-dark">{{ photo.gender }}</span>
+        <div class="card-footer">
+
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

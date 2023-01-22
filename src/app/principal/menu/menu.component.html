@@ -1,0 +1,55 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="vista" routerLinkActive="active-link">VISTA</a>
+    </li>
+    <li>
+      <a routerLink="form" routerLinkActive="active-link">FORMULARIO</a>
+    </li>
+    <li>
+      <a routerLink="busqueda" routerLinkActive="active-link">BUSQUEDA</a>
+    </li>
+  </ul>
+</nav>
+
+
+<style>
+  ul {
+    padding-left: 0;
+  }
+
+  nav>ul {
+    display: flex;
+    gap: .2rem;
+    flex-flow: row wrap;
+    list-style: none;
+
+    color: white;
+    font-size: 2rem;
+
+  }
+
+  nav li {
+    display: grid;
+    /* height */
+    min-width: 7ch;
+
+    /* border: .1rem solid white; */
+    flex-grow: 1;
+    text-align: center;
+    background-color: cornflowerblue;
+
+  }
+
+  nav a {
+    padding: 1ch .7ch;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .active-link {
+    background-color: blue;
+    transition: .2s all ease;
+    text-decoration: wavy wheat;
+  }
+</style>

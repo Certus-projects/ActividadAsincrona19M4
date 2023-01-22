@@ -1,0 +1,20 @@
+<p>vista works!</p>
+
+<pre class="d-none">{{vistaListado|json}}</pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NOMBRE</th>
+      <th>USERNAME</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of vistaListado">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.username}}</td>
+    </tr>
+  </tbody>
+</table>
